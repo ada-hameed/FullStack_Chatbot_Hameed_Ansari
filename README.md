@@ -27,6 +27,47 @@ The application provides a responsive DroneTV website, chatbot support for commo
 ### Database
 
 - PostgreSQL
+## Database Setup
+
+The project uses PostgreSQL for storing enquiries.
+
+### 1. Install PostgreSQL
+
+Install PostgreSQL on your local machine.
+
+### 2. Create the Database
+
+Create a PostgreSQL database named:
+
+```text
+dronetv_support
+
+Create the Enquiries Table
+
+Run the database.sql file included in the project.
+
+This will create the enquiries table and required constraints.
+
+Configure Environment Variables
+
+Create a .env file inside the backend folder:
+
+PORT=5000
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=dronetv_support
+DB_USER=postgres
+DB_PASSWORD=
+GROQ_API_KEY=groq_api_key
+GROQ_MODEL=openai/gpt-oss-20b
+
+Start the Backend
+cd backend
+npm install
+node src/server.js
+
+The backend will run on:
+http://localhost:5000
 
 ### AI / Chatbot
 
