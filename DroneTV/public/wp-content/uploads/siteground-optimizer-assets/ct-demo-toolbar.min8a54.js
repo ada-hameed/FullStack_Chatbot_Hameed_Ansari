@@ -1,0 +1,1 @@
+(function(){const n=new URLSearchParams(window.location.search),e=n.get("view");(e==="etsy"||e==="demo")&&sessionStorage.setItem("demo_source",e);const t=sessionStorage.getItem("demo_source");(t==="etsy"||t==="demo")&&document.documentElement.classList.add("ct-hide-demo-toolbar")})()

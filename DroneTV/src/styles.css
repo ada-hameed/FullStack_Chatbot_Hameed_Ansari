@@ -1,0 +1,1410 @@
+@font-face {
+    font-family: Manrope;
+    src: url('/wp-content/themes/udrone/assets/fonts/manrope/Manrope-Regular.ttf')
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url('/wp-content/themes/udrone/assets/fonts/manrope/Manrope-Bold.ttf');
+    font-weight: 700
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url('/wp-content/themes/udrone/assets/fonts/manrope/Manrope-ExtraBold.ttf');
+    font-weight: 800
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    font-family: Manrope, Arial, sans-serif;
+    background: #fff;
+    color: #161616
+}
+
+.dronetv-app {
+    overflow: hidden
+}
+
+.dronetv-site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: rgba(17, 17, 17, .97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, .12)
+}
+
+.dronetv-header-inner {
+    max-width: 1320px;
+    margin: auto;
+    min-height: 82px;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    gap: 36px
+}
+
+.dronetv-brand {
+    border: 0;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center
+}
+
+.dronetv-brand img {
+    width: 145px;
+    height: auto;
+    display: block
+}
+
+.dronetv-nav {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex: 1
+}
+
+.dronetv-nav button {
+    border: 0;
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    font: 700 14px Manrope;
+    cursor: pointer;
+    padding: 10px 2px;
+    position: relative
+}
+
+.dronetv-nav button:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 2px;
+    height: 2px;
+    background: #f5b800;
+    transition: .25s
+}
+
+.dronetv-nav button:hover,
+.dronetv-nav button.active {
+    color: #f5b800
+}
+
+.dronetv-nav button.active:after,
+.dronetv-nav button:hover:after {
+    right: 0
+}
+
+.dronetv-header-cta,
+.dronetv-primary {
+    border: 0;
+    color: #111;
+    background: #f5b800;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 13px;
+    cursor: pointer
+}
+
+.dronetv-mobile-toggle {
+    display: none;
+    background: none;
+    color: #fff;
+    border: 0;
+    font-size: 25px;
+    cursor: pointer
+}
+
+.dronetv-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: #f5b800
+}
+
+.dronetv-hero {
+    min-height: 780px;
+    padding: 150px max(28px, calc((100vw - 1260px)/2));
+    background: #171717;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px
+}
+
+.dronetv-hero-copy h1 {
+    font-size: clamp(50px, 6vw, 86px);
+    line-height: 1.02;
+    letter-spacing: -3px;
+    margin: 0 0 25px;
+    font-weight: 800
+}
+
+.dronetv-hero-copy h1 span {
+    color: #f5b800;
+    display: block
+}
+
+.dronetv-hero-copy p {
+    max-width: 600px;
+    color: #c8c8c8;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0 0 34px
+}
+
+.dronetv-hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.dronetv-hero-image img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    filter: drop-shadow(0 25px 35px rgba(0, 0, 0, .35))
+}
+
+.dronetv-intro,
+.dronetv-section,
+.dronetv-courses-section {
+    padding: 115px 28px;
+    max-width: 1320px;
+    margin: auto
+}
+
+.dronetv-section-heading {
+    max-width: 780px;
+    margin: 0 auto 55px;
+    text-align: center
+}
+
+.dronetv-section-heading h2 {
+    margin: 0 0 15px;
+    font-size: 46px;
+    line-height: 1.12;
+    letter-spacing: -1.5px
+}
+
+.dronetv-section-heading p {
+    margin: 0;
+    color: #707070;
+    font-size: 15px;
+    line-height: 1.8
+}
+
+.dronetv-service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px
+}
+
+.dronetv-service-grid.six {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.dronetv-service-card {
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    transition: .3s
+}
+
+.dronetv-service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .1)
+}
+
+.dronetv-card-image {
+    position: relative;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background: #eee
+}
+
+.dronetv-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .45s
+}
+
+.dronetv-service-card:hover .dronetv-card-image img {
+    transform: scale(1.05)
+}
+
+.dronetv-card-image span {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f5b800;
+    color: #111;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 800
+}
+
+.dronetv-card-body {
+    padding: 25px
+}
+
+.dronetv-card-body h3 {
+    margin: 0 0 12px;
+    font-size: 21px
+}
+
+.dronetv-card-body p {
+    margin: 0 0 20px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.7
+}
+
+.dronetv-card-body button,
+.dronetv-project-card button,
+.dronetv-course-link {
+    border: 0;
+    background: none;
+    padding: 0;
+    color: #171717;
+    font: 800 12px Manrope;
+    cursor: pointer
+}
+
+.dronetv-card-body button:hover,
+.dronetv-project-card button:hover,
+.dronetv-course-link:hover {
+    color: #f5b800
+}
+
+.dronetv-outline {
+    display: block;
+    margin: 45px auto 0;
+    background: transparent;
+    border: 1px solid #171717;
+    padding: 14px 23px;
+    font: 800 12px Manrope;
+    cursor: pointer
+}
+
+.dronetv-outline:hover {
+    background: #171717;
+    color: #fff
+}
+
+.dronetv-dark-band {
+    background: #171717;
+    color: #fff;
+    padding: 100px max(28px, calc((100vw - 1260px)/2));
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 80px;
+    align-items: center
+}
+
+.dronetv-dark-band h2 {
+    font-size: 48px;
+    line-height: 1.12;
+    letter-spacing: -1px;
+    margin: 0 0 20px
+}
+
+.dronetv-dark-band p {
+    color: #c4c4c4;
+    line-height: 1.8;
+    max-width: 650px
+}
+
+.dronetv-number-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px
+}
+
+.dronetv-number-grid div {
+    border: 1px solid rgba(255, 255, 255, .14);
+    padding: 24px;
+    display: flex;
+    gap: 20px;
+    align-items: center
+}
+
+.dronetv-number-grid strong {
+    font-size: 25px;
+    color: #f5b800
+}
+
+.dronetv-number-grid span {
+    font-size: 13px
+}
+
+.dronetv-dark-band.compact {
+    display: block;
+    text-align: center
+}
+
+.dronetv-dark-band.compact>div {
+    max-width: 800px;
+    margin: auto
+}
+
+.dronetv-courses-section {
+    max-width: none;
+    background: #f7f7f7
+}
+
+.dronetv-courses-section>.dronetv-section-heading,
+.dronetv-courses-section>.dronetv-course-grid {
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.dronetv-course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px
+}
+
+.dronetv-course-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 35px;
+    transition: .3s
+}
+
+.dronetv-course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08)
+}
+
+.dronetv-course-card.large {
+    min-height: 380px
+}
+
+.dronetv-course-icon {
+    width: 52px;
+    height: 52px;
+    background: #f5b800;
+    color: #111;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 25px
+}
+
+.dronetv-course-card h3 {
+    font-size: 24px;
+    margin: 0 0 14px
+}
+
+.dronetv-course-card p {
+    color: #777;
+    line-height: 1.75;
+    font-size: 13px
+}
+
+.dronetv-course-card ul {
+    padding-left: 18px;
+    color: #666;
+    font-size: 13px;
+    line-height: 2;
+    margin: 20px 0 25px
+}
+
+.dronetv-cta,
+.dronetv-training-strip {
+    padding: 75px max(28px, calc((100vw - 1260px)/2));
+    background: #f5b800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px
+}
+
+.dronetv-cta h2,
+.dronetv-training-strip h2 {
+    margin: 0 0 10px;
+    font-size: 36px
+}
+
+.dronetv-cta p,
+.dronetv-training-strip p {
+    margin: 0;
+    max-width: 650px;
+    line-height: 1.7
+}
+
+.dronetv-cta .dronetv-primary {
+    background: #171717;
+    color: #fff
+}
+
+.dronetv-page {
+    padding-top: 82px
+}
+
+.dronetv-page-hero {
+    background: #171717;
+    color: #fff;
+    padding: 125px 28px 110px;
+    text-align: center
+}
+
+.dronetv-page-hero h1 {
+    max-width: 950px;
+    margin: 0 auto 18px;
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.08;
+    letter-spacing: -2px
+}
+
+.dronetv-page-hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #c8c8c8;
+    line-height: 1.8
+}
+
+.dronetv-project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px
+}
+
+.dronetv-project-card {
+    background: #fff;
+    border: 1px solid #e5e5e5
+}
+
+.dronetv-project-card img {
+    width: 100%;
+    aspect-ratio: 1.4/1;
+    object-fit: cover;
+    display: block
+}
+
+.dronetv-project-card>div {
+    padding: 28px
+}
+
+.dronetv-project-card h3 {
+    font-size: 24px;
+    margin: 0 0 10px
+}
+
+.dronetv-project-card p {
+    font-size: 13px;
+    line-height: 1.75;
+    color: #777;
+    margin: 0 0 20px
+}
+
+.dronetv-enquiry-section {
+    background: #f7f7f7;
+    padding: 100px 28px
+}
+
+.dronetv-enquiry-inner {
+    max-width: 1050px;
+    margin: auto
+}
+
+.dronetv-enquiry-form {
+    background: #fff;
+    padding: 42px;
+    border: 1px solid #e5e5e5
+}
+
+.dronetv-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px
+}
+
+.dronetv-enquiry-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #222;
+    font-size: 12px;
+    font-weight: 800
+}
+
+.dronetv-enquiry-form input,
+.dronetv-enquiry-form select,
+.dronetv-enquiry-form textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 14px;
+    background: #fff;
+    color: #333;
+    outline: none;
+    font: 13px Manrope
+}
+
+.dronetv-enquiry-form input:focus,
+.dronetv-enquiry-form select:focus,
+.dronetv-enquiry-form textarea:focus {
+    border-color: #f5b800
+}
+
+.dronetv-full-field {
+    grid-column: 1/-1
+}
+
+.dronetv-submit {
+    margin-top: 25px;
+    border: 0;
+    background: #f5b800;
+    color: #111;
+    padding: 15px 25px;
+    font: 800 12px Manrope;
+    cursor: pointer
+}
+
+.dronetv-submit:disabled {
+    opacity: .6
+}
+
+.dronetv-form-result {
+    margin-top: 18px;
+    padding: 13px 16px;
+    background: #f0f8ee;
+    color: #27652b;
+    font-size: 13px
+}
+
+.dronetv-footer {
+    background: #111;
+    color: #fff;
+    padding: 70px max(28px, calc((100vw - 1260px)/2)) 20px
+}
+
+.dronetv-footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 70px;
+    padding-bottom: 55px
+}
+
+.dronetv-footer-logo {
+    width: 145px;
+    margin-bottom: 18px
+}
+
+.dronetv-footer p {
+    color: #aaa;
+    font-size: 12px;
+    line-height: 1.8;
+    max-width: 400px
+}
+
+.dronetv-footer h4 {
+    margin: 0 0 18px;
+    font-size: 14px
+}
+
+.dronetv-footer button {
+    display: block;
+    border: 0;
+    background: none;
+    color: #aaa;
+    padding: 0;
+    margin: 0 0 12px;
+    font: 12px Manrope;
+    cursor: pointer
+}
+
+.dronetv-footer button:hover {
+    color: #f5b800
+}
+
+.dronetv-footer-bottom {
+    border-top: 1px solid #292929;
+    padding-top: 20px;
+    color: #777;
+    font-size: 11px
+}
+
+/* =========================================================
+   DRONETV CHATBOT — PREMIUM UI
+   ========================================================= */
+
+.dronetv-chat-launcher {
+    position: fixed;
+    right: 26px;
+    bottom: 26px;
+    z-index: 10001;
+
+    width: 64px;
+    height: 64px;
+
+    border: 3px solid rgba(255, 255, 255, .9);
+    border-radius: 50%;
+
+    background: #f5b800;
+    color: #111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .25),
+        0 0 0 0 rgba(245, 184, 0, .45);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+    animation: dronetv-chat-pulse 2.8s infinite;
+}
+
+.dronetv-chat-launcher:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 15px 38px rgba(0, 0, 0, .3),
+        0 0 0 8px rgba(245, 184, 0, .12);
+
+    animation: none;
+}
+
+@keyframes dronetv-chat-pulse {
+    0% {
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, .25),
+            0 0 0 0 rgba(245, 184, 0, .4);
+    }
+
+    70% {
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, .25),
+            0 0 0 12px rgba(245, 184, 0, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, .25),
+            0 0 0 0 rgba(245, 184, 0, 0);
+    }
+}
+
+
+/* =========================
+   CHAT WINDOW
+   ========================= */
+
+.dronetv-chat-panel {
+    position: fixed;
+    right: 26px;
+    bottom: 104px;
+    z-index: 10001;
+
+    width: 390px;
+    max-width: calc(100vw - 30px);
+
+    /* Important: screen ke top se gap */
+    height: min(650px, calc(100vh - 130px));
+    max-height: calc(100vh - 130px);
+
+    background: #fff;
+
+    border: 1px solid rgba(0, 0, 0, .08);
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, .22),
+        0 8px 25px rgba(0, 0, 0, .08);
+
+    animation: dronetv-chat-open .25s ease-out;
+
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes dronetv-chat-open {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================
+   CHAT HEADER
+   ========================= */
+
+.dronetv-chat-header {
+    position: relative;
+
+    background: #171717;
+    color: #fff;
+
+    padding: 17px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.dronetv-chat-header > div {
+    position: relative;
+    padding-left: 48px;
+}
+
+.dronetv-chat-header > div::before {
+    content: "✦";
+
+    position: absolute;
+    left: 0;
+    top: 1px;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #f5b800;
+    color: #111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.dronetv-chat-header strong {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: -.2px;
+}
+
+.dronetv-chat-header small {
+    display: flex;
+    align-items: center;
+
+    margin-top: 4px;
+
+    color: #aaa;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.dronetv-chat-header small::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    margin-right: 6px;
+
+    border-radius: 50%;
+
+    background: #45c76f;
+    box-shadow: 0 0 0 3px rgba(69, 199, 111, .12);
+}
+
+.dronetv-chat-header button {
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, .06);
+    color: #f5b800;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.dronetv-chat-header button:hover {
+    background: #f5b800;
+    color: #111;
+
+    transform: rotate(-25deg);
+}
+
+
+/* =========================
+   MESSAGE AREA
+   ========================= */
+
+.dronetv-chat-messages {
+    flex: 1;
+    min-height: 0;
+
+    overflow-y: auto;
+
+    padding: 20px 16px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(245, 184, 0, .08),
+            transparent 35%
+        ),
+        #f7f7f7;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+
+.dronetv-chat-messages::-webkit-scrollbar {
+    width: 5px;
+}
+
+.dronetv-chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dronetv-chat-messages::-webkit-scrollbar-thumb {
+    background: #d2d2d2;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   MESSAGE BUBBLES
+   ========================= */
+
+.dronetv-message {
+    position: relative;
+
+    max-width: 82%;
+
+    padding: 11px 14px;
+
+    border-radius: 14px;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    word-wrap: break-word;
+
+    animation: dronetv-message-in .2s ease-out;
+}
+
+@keyframes dronetv-message-in {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Bot */
+
+.dronetv-message.bot {
+    align-self: flex-start;
+
+    background: #fff;
+    color: #333;
+
+    border: 1px solid #e7e7e7;
+
+    border-bottom-left-radius: 4px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .04);
+}
+
+
+/* User */
+
+.dronetv-message.user {
+    align-self: flex-end;
+
+    background: #f5b800;
+    color: #111;
+
+    border: 1px solid #e6ad00;
+
+    border-bottom-right-radius: 4px;
+
+    font-weight: 600;
+
+    box-shadow: 0 4px 12px rgba(245, 184, 0, .18);
+}
+
+
+/* =========================
+   QUICK QUESTIONS
+   ========================= */
+
+.dronetv-chat-quick {
+    display: flex;
+    gap: 7px;
+
+    padding: 11px 12px;
+
+    overflow-x: auto;
+
+    background: #fff;
+
+    border-top: 1px solid #eee;
+
+    scrollbar-width: none;
+}
+
+.dronetv-chat-quick::-webkit-scrollbar {
+    display: none;
+}
+
+.dronetv-chat-quick button {
+    flex-shrink: 0;
+
+    white-space: nowrap;
+
+    border: 1px solid #dedede;
+    border-radius: 20px;
+
+    background: #fff;
+
+    color: #333;
+
+    padding: 7px 11px;
+
+    font: 700 10px Manrope;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.dronetv-chat-quick button:hover {
+    border-color: #f5b800;
+
+    background: #f5b800;
+
+    color: #111;
+
+    transform: translateY(-1px);
+}
+
+.dronetv-chat-quick button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================
+   INPUT AREA
+   ========================= */
+
+.dronetv-chat-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 11px;
+
+    background: #fff;
+
+    border-top: 1px solid #eee;
+}
+
+.dronetv-chat-input input {
+    flex: 1;
+    min-width: 0;
+
+    height: 42px;
+
+    border: 1px solid #e1e1e1;
+    border-radius: 12px;
+
+    padding: 0 14px;
+
+    background: #f8f8f8;
+    color: #222;
+
+    outline: none;
+
+    font: 12px Manrope;
+
+    transition: .2s ease;
+}
+
+.dronetv-chat-input input::placeholder {
+    color: #999;
+}
+
+.dronetv-chat-input input:focus {
+    background: #fff;
+
+    border-color: #f5b800;
+
+    box-shadow: 0 0 0 3px rgba(245, 184, 0, .1);
+}
+
+.dronetv-chat-input button i {
+    font-size: 15px;
+    line-height: 1;
+}
+.dronetv-chat-input button {
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    border: 0;
+    border-radius: 12px;
+
+    background: #171717;
+    color: #f5b800;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.dronetv-chat-input button:hover {
+    background: #f5b800;
+    color: #111;
+
+    transform: translateY(-1px);
+}
+
+.dronetv-chat-input button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media(max-width:620px) {
+
+    .dronetv-chat-launcher {
+        right: 18px;
+        bottom: 18px;
+
+        width: 58px;
+        height: 58px;
+
+        font-size: 25px;
+    }
+
+.dronetv-chat-panel {
+    right: 12px;
+    bottom: 88px;
+
+    width: calc(100vw - 24px);
+    max-width: none;
+
+    height: calc(100vh - 110px);
+    max-height: calc(100vh - 110px);
+
+    border-radius: 16px;
+}
+
+    .dronetv-chat-messages {
+        height: 300px;
+    }
+
+    .dronetv-message {
+        max-width: 88%;
+    }
+
+    .dronetv-chat-header {
+        padding: 15px;
+    }
+}
+
+@media(max-width:950px) {
+    .dronetv-nav {
+        display: none
+    }
+
+    .dronetv-nav.mobile-open {
+        display: flex;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #111;
+        padding: 15px 22px;
+        flex-direction: column;
+        gap: 4px
+    }
+
+    .dronetv-nav.mobile-open button {
+        text-align: left
+    }
+
+    .dronetv-header-cta {
+        display: none
+    }
+
+    .dronetv-mobile-toggle {
+        display: block;
+        margin-left: auto
+    }
+
+    .dronetv-header-inner {
+        min-height: 70px;
+        padding: 0 18px
+    }
+
+    .dronetv-brand img {
+        width: 125px
+    }
+
+    .dronetv-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 130px;
+        padding-bottom: 75px
+    }
+
+    .dronetv-hero-image {
+        order: -1
+    }
+
+    .dronetv-hero-copy {
+        text-align: center
+    }
+
+    .dronetv-hero-copy p {
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .dronetv-service-grid,
+    .dronetv-service-grid.six,
+    .dronetv-course-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .dronetv-dark-band {
+        grid-template-columns: 1fr
+    }
+
+    .dronetv-project-grid {
+        grid-template-columns: 1fr
+    }
+
+    .dronetv-footer-grid {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media(max-width:620px) {
+    .dronetv-hero-copy h1 {
+        font-size: 48px;
+        letter-spacing: -2px
+    }
+
+    .dronetv-section-heading h2 {
+        font-size: 35px
+    }
+
+    .dronetv-dark-band h2 {
+        font-size: 35px
+    }
+
+    .dronetv-service-grid,
+    .dronetv-service-grid.six,
+    .dronetv-course-grid {
+        grid-template-columns: 1fr
+    }
+
+    .dronetv-form-grid {
+        grid-template-columns: 1fr
+    }
+
+    .dronetv-full-field {
+        grid-column: auto
+    }
+
+    .dronetv-enquiry-form {
+        padding: 25px
+    }
+
+    .dronetv-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px
+    }
+
+    .dronetv-cta,
+    .dronetv-training-strip {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .dronetv-page-hero {
+        padding: 100px 20px 75px
+    }
+
+    .dronetv-intro,
+    .dronetv-section,
+    .dronetv-courses-section {
+        padding: 80px 18px
+    }
+
+    .dronetv-enquiry-section {
+        padding: 75px 18px
+    }
+
+    .dronetv-chat-panel {
+        right: 15px;
+        bottom: 88px
+    }
+}
+
+/* =========================
+   TYPING INDICATOR
+   ========================= */
+
+.dronetv-typing {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    min-width: 52px;
+    min-height: 38px;
+}
+
+.dronetv-typing span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #999;
+
+    animation: dronetv-typing 1.2s infinite ease-in-out;
+}
+
+.dronetv-typing span:nth-child(2) {
+    animation-delay: .15s;
+}
+
+.dronetv-typing span:nth-child(3) {
+    animation-delay: .3s;
+}
+
+@keyframes dronetv-typing {
+    0%,
+    60%,
+    100% {
+        opacity: .35;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(-3px);
+    }
+}
+
+.dronetv-chat-enquiry {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.dronetv-chat-enquiry .dronetv-enquiry-form {
+    margin: 0;
+}
+
+.dronetv-chat-enquiry .dronetv-form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dronetv-chat-enquiry label {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.dronetv-chat-enquiry input,
+.dronetv-chat-enquiry select,
+.dronetv-chat-enquiry textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px;
+}
+
+.dronetv-chat-enquiry textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.dronetv-chat-enquiry .dronetv-submit {
+    width: 100%;
+    margin-top: 10px;
+}

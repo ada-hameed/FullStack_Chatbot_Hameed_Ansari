@@ -1,0 +1,669 @@
+/* =========================================================
+   DRONETV ADMIN - GLOBAL THEME
+   Black / Yellow / White
+========================================================= */
+
+:root {
+  /* DroneTV Brand Colors */
+  --dronetv-black: #171717;
+  --dronetv-dark: #222222;
+  --dronetv-yellow: #ffc72c;
+
+  /* Yellow Variants */
+  --dronetv-yellow-light: #fff8dc;
+  --dronetv-yellow-dark: #e5ad00;
+
+  /* Basic Colors */
+  --dronetv-white: #ffffff;
+  --dronetv-bg: #f5f5f5;
+
+  /* Borders & Text */
+  --dronetv-border: #dddddd;
+  --dronetv-text: #333333;
+  --dronetv-muted: #777777;
+
+  /* Extra UI Colors */
+  --dronetv-hover: #2d2d2d;
+  --dronetv-success: #198754;
+  --dronetv-danger: #dc3545;
+}
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+  margin: 0;
+
+  background: var(--dronetv-bg);
+
+  color: var(--dronetv-text);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.app-header.navbar {
+  background: var(--dronetv-white) !important;
+
+  border-bottom: 1px solid var(--dronetv-border) !important;
+
+  min-height: 58px;
+}
+
+.app-header .nav-link {
+  color: var(--dronetv-dark) !important;
+
+  font-size: 13px;
+}
+
+.app-header .nav-link:hover {
+  color: var(--dronetv-black) !important;
+}
+
+.app-header .nav-link i {
+  color: var(--dronetv-black);
+}
+
+/* Admin name */
+
+.app-header .navbar-nav:last-child .nav-link {
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.app-sidebar {
+  background: var(--dronetv-black) !important;
+
+  border-right: 1px solid #111111 !important;
+}
+
+/* Brand */
+
+.app-sidebar .brand-link {
+  background: var(--dronetv-black) !important;
+
+  border-bottom: 1px solid #353535 !important;
+
+  min-height: 58px;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.app-sidebar .brand-text {
+  color: var(--dronetv-white) !important;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.2px;
+}
+
+/* Sidebar section title */
+
+.app-sidebar .nav-header {
+  color: #aaaaaa !important;
+
+  font-size: 10px !important;
+
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  padding: 18px 16px 8px;
+}
+
+/* Sidebar links */
+
+.app-sidebar .nav-link {
+  color: #d0d0d0 !important;
+
+  font-size: 13px !important;
+
+  padding: 9px 12px !important;
+
+  /* margin: 2px 10px; */
+
+  border-radius: 5px;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.app-sidebar .nav-link .nav-icon {
+  font-size: 14px !important;
+
+  margin-right: 6px;
+
+  color: #bdbdbd !important;
+}
+
+/* Hover */
+
+.app-sidebar .nav-link:hover {
+  background: #2a2a2a !important;
+
+  color: var(--dronetv-white) !important;
+}
+
+.app-sidebar .nav-link:hover .nav-icon {
+  color: var(--dronetv-yellow) !important;
+}
+
+/* Active */
+
+.app-sidebar .nav-link.active {
+  background: #333333 !important;
+
+  color: var(--dronetv-white) !important;
+
+  border-left: 3px solid var(--dronetv-yellow);
+
+  padding-left: 9px !important;
+}
+
+.app-sidebar .nav-link.active .nav-icon {
+  color: var(--dronetv-yellow) !important;
+}
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.app-main {
+  background: var(--dronetv-bg);
+
+  font-size: 13px;
+}
+
+.app-content {
+  padding-top: 18px;
+}
+
+/* =========================================================
+   ALL CARDS
+========================================================= */
+
+.card {
+  border: 1px solid var(--dronetv-border) !important;
+
+  border-radius: 7px !important;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.07) !important;
+
+  overflow: hidden;
+}
+
+.card-header {
+  min-height: 48px;
+
+  padding: 12px 15px !important;
+
+  background: var(--dronetv-black) !important;
+
+  color: var(--dronetv-white) !important;
+
+  border-bottom: 3px solid var(--dronetv-yellow) !important;
+}
+
+.card-header .card-title {
+  margin: 0;
+
+  font-size: 14px !important;
+
+  font-weight: 600;
+
+  color: var(--dronetv-white) !important;
+}
+
+.card-header .card-title i {
+  color: var(--dronetv-yellow);
+
+  margin-right: 6px;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+  font-size: 12px;
+
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background: var(--dronetv-black) !important;
+
+  border-color: var(--dronetv-black) !important;
+
+  color: var(--dronetv-white) !important;
+}
+
+.btn-primary:hover {
+  background: #333333 !important;
+
+  border-color: #333333 !important;
+}
+
+.btn-outline-primary {
+  color: var(--dronetv-black) !important;
+
+  border-color: #bdbdbd !important;
+}
+
+.btn-outline-primary:hover {
+  background: var(--dronetv-yellow) !important;
+
+  border-color: var(--dronetv-yellow) !important;
+
+  color: var(--dronetv-black) !important;
+}
+
+/* =========================================================
+   FORM CONTROLS
+========================================================= */
+
+.form-control,
+.form-select {
+  font-size: 12px !important;
+
+  border-color: #d8d8d8;
+
+  border-radius: 5px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--dronetv-yellow);
+
+  box-shadow:
+    0 0 0 0.15rem rgba(255, 199, 44, 0.22);
+}
+
+/* =========================================================
+   TABLES - ENQUIRIES
+========================================================= */
+
+.dronetv-enquiry-table {
+  width: 100%;
+
+  table-layout: fixed;
+
+  font-size: 12px;
+}
+
+.dronetv-enquiry-table th {
+  padding: 8px 6px !important;
+
+  background: #f4f4f4 !important;
+
+  color: #333333 !important;
+
+  border-bottom: 1px solid #d5d5d5 !important;
+
+  font-size: 10px !important;
+
+  font-weight: 700 !important;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.2px;
+
+  white-space: nowrap;
+}
+
+.dronetv-enquiry-table td {
+  padding: 7px 6px !important;
+
+  font-size: 12px !important;
+
+  color: #333333;
+
+  vertical-align: middle;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.dronetv-enquiry-table tbody tr:hover {
+  background: var(--dronetv-yellow-light) !important;
+}
+
+/* =========================================================
+   TABLE BADGES
+========================================================= */
+
+.dronetv-enquiry-table .badge {
+  font-size: 9px !important;
+
+  padding: 4px 6px !important;
+
+  border-radius: 4px;
+
+  font-weight: 700;
+}
+
+/* Student */
+
+.dronetv-enquiry-table .text-bg-primary {
+  background: var(--dronetv-black) !important;
+
+  color: var(--dronetv-yellow) !important;
+}
+
+/* Customer */
+
+.dronetv-enquiry-table .text-bg-success {
+  background: var(--dronetv-yellow) !important;
+
+  color: var(--dronetv-black) !important;
+}
+
+/* Other */
+
+.dronetv-enquiry-table .text-bg-secondary {
+  background: #e8e8e8 !important;
+
+  color: #444444 !important;
+}
+
+/* New */
+
+.dronetv-enquiry-table .text-bg-info {
+  background: #eeeeee !important;
+
+  color: #333333 !important;
+}
+
+/* In Progress */
+
+.dronetv-enquiry-table .text-bg-warning {
+  background: var(--dronetv-yellow) !important;
+
+  color: var(--dronetv-black) !important;
+}
+
+/* Closed */
+
+.dronetv-enquiry-table .text-bg-success {
+  background: var(--dronetv-yellow) !important;
+
+  color: var(--dronetv-black) !important;
+}
+
+/* =========================================================
+   STATUS SELECT
+========================================================= */
+
+.dronetv-enquiry-table .form-select {
+  height: 28px !important;
+
+  min-height: 28px !important;
+
+  padding: 3px 22px 3px 6px !important;
+
+  font-size: 10px !important;
+
+  font-weight: 600;
+
+  color: #222222;
+
+  background-color: #ffffff;
+
+  border-color: #d2d2d2;
+}
+
+.dronetv-enquiry-table .form-select:focus {
+  border-color: var(--dronetv-yellow);
+
+  box-shadow:
+    0 0 0 0.12rem rgba(255, 199, 44, 0.2);
+}
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.dronetv-enquiry-table .action-btn {
+  width: 27px !important;
+
+  height: 27px !important;
+
+  padding: 0 !important;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 10px !important;
+
+  border-radius: 5px;
+}
+
+.dronetv-enquiry-table .action-btn.btn-outline-primary {
+  color: #333333 !important;
+
+  border-color: #bdbdbd !important;
+}
+
+.dronetv-enquiry-table .action-btn.btn-outline-primary:hover {
+  background: var(--dronetv-yellow) !important;
+
+  border-color: var(--dronetv-yellow) !important;
+
+  color: #171717 !important;
+}
+
+.dronetv-enquiry-table .action-btn.btn-outline-danger {
+  color: #555555 !important;
+
+  border-color: #c8c8c8 !important;
+}
+
+.dronetv-enquiry-table .action-btn.btn-outline-danger:hover {
+  background: #171717 !important;
+
+  border-color: #171717 !important;
+
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.dronetv-enquiry-pagination button {
+  font-size: 11px;
+
+  min-width: 30px;
+
+  height: 30px;
+
+  border: 1px solid #cccccc;
+
+  background: #ffffff;
+
+  color: #444444;
+}
+.dronetv-logo {
+  max-width: 145px;
+  max-height: 42px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.app-sidebar .nav-link.active {
+  background-color: #ffc72c !important;
+  color: #171717 !important;
+  font-weight: 600;
+}
+
+.app-sidebar .nav-link.active .nav-icon {
+  color: #171717 !important;
+}
+
+
+.dronetv-enquiry-pagination button:hover:not(:disabled) {
+  background: var(--dronetv-yellow);
+
+  border-color: var(--dronetv-yellow);
+
+  color: #171717;
+}
+
+.dronetv-enquiry-pagination button.active {
+  background: var(--dronetv-black);
+
+  border-color: var(--dronetv-black);
+
+  color: var(--dronetv-yellow);
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-content {
+  border: 0;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+  background: var(--dronetv-black) !important;
+
+  color: #ffffff !important;
+
+  border-bottom: 3px solid var(--dronetv-yellow) !important;
+
+  padding: 13px 16px !important;
+}
+
+.modal-title {
+  font-size: 16px !important;
+
+  font-weight: 650;
+}
+
+.modal-title i {
+  color: var(--dronetv-yellow);
+
+  margin-right: 7px;
+}
+
+.modal-body {
+  font-size: 12px;
+
+  padding: 18px !important;
+}
+
+.modal-footer {
+  padding: 10px 16px !important;
+
+  border-top: 1px solid #e2e2e2;
+}
+
+.modal-footer .btn-secondary {
+  background: #eeeeee;
+
+  border-color: #d5d5d5;
+
+  color: #333333;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.alert {
+  font-size: 12px;
+
+  border-radius: 5px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .app-sidebar .brand-text {
+    font-size: 16px;
+  }
+
+  .app-sidebar .nav-link {
+    font-size: 12px !important;
+  }
+
+  .app-content {
+    padding-top: 14px;
+  }
+
+  .card-header {
+    padding: 10px 12px !important;
+  }
+
+  .card-header .card-title {
+    font-size: 13px !important;
+  }
+}
+
+/* Small custom layer on top of AdminLTE 4.9.1. */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+.modal {
+  background: transparent;
+  z-index: 1050;
+}
+.modal .modal-dialog {
+  z-index: 1051;
+}
+.app-content {
+  min-height: calc(100vh - 120px);
+}
+.table th {
+  white-space: nowrap;
+}
+.table td {
+  vertical-align: middle;
+}
+.card-tools .spinner-border {
+  vertical-align: -2px;
+}
+@media (max-width: 767.98px) {
+  .table td,
+  .table th {
+    white-space: nowrap;
+  }
+}
